@@ -1,0 +1,231 @@
+  <html id="html" lang="ar" dir="rtl">
+
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script> <!--tailWind css Library CDN-->
+    <link rel="stylesheet" href="css/css.css"> <!--link css file-->
+    <title>اتصل بنا</title>
+
+    <meta charset="utf-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">                                           <!--font cdn-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                                      <!--font cdn-->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">       <!--font cdn-->
+
+
+
+
+
+
+    </head>
+    <body class="bodyColor" >
+
+    <div id="app">
+      <!--navbar-->
+      <nav class="flex justify-center w-full fixed py-4 bodyColor">
+        <div class="w-full flex justify-center"><!--nav container-->
+            <div class=" w-10/12">
+    
+                <div class="flex space-x-10"> <!--nav SVG - language selection - search box - logo-->
+                    <div></div><!--empty div because (space-x-10) doesnt work on first element-->
+                 <!--account svg-->
+                 <div  class="h-11 w-11  hover:bg-lime-100 rounded-xl cursor-pointer" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user " width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c762" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <circle cx="12" cy="7" r="4" />
+                      <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                    </svg>
+                   </div>
+                   
+                  
+                  
+                  
+                  <!--shopping cart svg-->
+                  <div  class="h-11 w-11  hover:bg-lime-100 rounded-xl cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart " width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c762" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="6" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M17 17h-11v-14h-2" />
+                    <path d="M6 5l14 1l-1 7h-13" />
+                  </svg>
+                  </div>
+                    <!--shopping cart svg-->
+                  
+                  
+                  <!--heart svg-->
+                  <div  class="h-11 w-11  hover:bg-lime-100 rounded-xl cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart " width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c762" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                    </svg>
+                  </div>
+                    
+                  
+                  
+                  <!--language selection-->
+                  <div @click="showLanguages" @mouseleave="hideLanguages" class="hover:bg-lime-100 rounded-xl cursor-pointer">
+                    <p class=" green2 text-xl">عربي</p>
+                    <div id="language" class="hidden bodyColor border border-2 border-green-800 rounded-l" style="margin-top: -20px;">
+                      <ul >
+                      <li id="arabic" class="hover:bg-green-200"> عربي</li>
+                      <li id="english" class="hover:bg-green-200">English</li>
+                    </ul>
+                  </div>
+                  </div>
+                
+                    <!--search box-->
+                  <input placeholder="بحث عن منتج"  class="border border-2 rounded-xl w-full h-10 p-4 border-green2">
+                  
+                  <!--logo & text image-->
+                  <img src="css/eco equipement/logo and text.png" width="88px" height="44px" class="ml-4  mb-0 " >
+                </div>
+                
+                <ul class="flex text-s space-x-4 lg:space-x-10 green3 lg:text-xl my-3.5"> <!--sections below nav-->
+                    <li></li>
+                    <li @click="goToIndex()" class="cursor-pointer hover:underline">الرئيسية</li>
+                    <li @click="goToBags()" class="cursor-pointer hover:underline">حقائب التسوق القماشية</li>
+                    <li @click="goTopackaging()" class="cursor-pointer hover:underline">منتجات التغليف صديقة البيئة</li>
+                    <li @click="goToPlasticReplace()" class="cursor-pointer hover:underline">بدائل البلاستيك</li>
+                    <li @click="goToPersonalCare()" class="cursor-pointer hover:underline">منتجات العناية الشخصية</li>
+                </ul>
+                </div>
+        </div>
+       </nav>
+       <div class="bodyColor" style="width: 100%; height: 125px;"></div><!--fill space behind nav-->
+       <div class="w-full h-1.5 bg-green-400 fixed"></div><!--nav end strip-->
+    
+      
+      
+<h1 class="text-center green3 text-4xl m-20">اتصل بنا</h1>   
+<div class="w-full mb-20">
+    <div class="grid grid-cols-3 gap-5 justify-items-center">
+
+        <div class="flex flex-col w-10/12 space-y-4 border border-2 bg-green-200 pr-4 pt-4">
+    <span>نموذج الاتصال</span>
+    <span>الاسم:</span>
+    <input class="w-6/12 rounded-l" placeholder="الاسم">
+    <span>البريد الالكتروني:</span>
+    <input class="w-6/12 mb-8 rounded-l" placeholder="البريد الالكتروني">
+    <br>
+        </div>
+    
+    
+        <div class="flex flex-col w-10/12 space-y-4 border border-2 bg-green-200 p-4">
+    <span>الموضوع:</span>
+    <textarea class="h-full w-full rounded-xl p-1 text-s"></textarea>
+        </div>
+    
+    
+        <div class="flex flex-col w-10/12 space-y-4 border border-2 bg-green-200 pr-4 pt-4">
+    <span>موقعنا
+        <br> <br>
+        العنوان: ايكو لايف
+        <br>
+        العراق - بغداد - كرادة خارج
+        <br><br>
+        رقم الهاتف او الجوال 1234
+    </span>
+        </div>
+</div> 
+
+
+
+
+</div>     
+
+    <!-- final links green stip-->
+    <div>
+      <div class="w-full h-2 my-10 mr-0 bg-green2"></div>
+  
+  <!--final links-->
+      <div class="grid grid-cols-4 justify-items-center	my-6 mx-4 px-10"> <!--arabic final links-->
+        <div> <span class="text-xl">ايكو لايف</span> <p class="text-s text-justify	">ايكو هو مشروع يقوم بصنع وتوفير منتجات صديقة للبيئة , خضراء نظيفة، دائمة واستثنائية نحو بيئة خالية من النفايات , هلا بيكم اليوم، وكل يوم</p> </div>
+        <div> <span>روابط هامة</span> <ul><li class="hover:text-green-300"><a @click="goToAboutUs()">عن الموقع</a></li>    <li class="hover:text-green-300"><a @click="goTocontactUs()">اتصل بنا</a></li>    <li class="hover:text-green-300"><a @click="goToTerms()">الشروط والمواصفات</a></li></ul></div>
+        <div> <span>الشروط والاحكام</span>    <ul><li class="hover:text-green-300"><a @click="goToAboutUs()">عن الموقع</a></li>    <li class="hover:text-green-300"><a @click="goTocontactUs()">اتصل بنا</a></li>    <li class="hover:text-green-300"><a @click="goToTerms()">الشروط والمواصفات</a></li></ul></div>
+        <div> <span>اتصل بنا</span>         <p>العراق - بغداد - ساحة عقبة</p> <p>eco.iprteam@gmail.com</p></div>
+      </div>
+  
+      <!--social media logos-->
+      <div class=" flex justify-center items-center space-x-20 my-7">
+        <a class="hover:bg-green-200 rounded-xl cursor-pointer ml-16" href="https://www.facebook.com/ecolifeiraq">      
+          <!--facebook svg-->
+          <svg xmlns="http://www.w3.org/2000/svg" class=" mx-4 icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c763" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+          </svg>
+        </a>
+        
+  
+        <!--instagram svg-->
+        <a class="hover:bg-green-200 rounded-xl cursor-pointer" href="https://www.instagram.com/ecolife.iq/">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c763" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <rect x="4" y="4" width="16" height="16" rx="4" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+        </svg>
+      </a>
+        
+        <!--linked-in svg-->
+        <a class="hover:bg-green-200 rounded-xl cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c763" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+        
+        <!--twitter SVG-->
+        <a class="hover:bg-green-200 rounded-xl cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c763" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+          </svg>
+        </a>
+  
+        <!--snap chat SVG-->
+        <a class="hover:bg-green-200 rounded-xl cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-snapchat" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c763" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M16.882 7.842a4.882 4.882 0 0 0 -9.764 0c0 4.273 -.213 6.409 -4.118 8.118c2 .882 2 .882 3 3c3 0 4 2 6 2s3 -2 6 -2c1 -2.118 1 -2.118 3 -3c-3.906 -1.709 -4.118 -3.845 -4.118 -8.118zm-13.882 8.119c4 -2.118 4 -4.118 1 -7.118m17 7.118c-4 -2.118 -4 -4.118 -1 -7.118" />
+          </svg>
+        </a>
+        
+        <!--tik tok SVG-->
+        <a class="hover:bg-green-200 rounded-xl cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tiktok" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#89c763" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5" />
+          </svg>
+        </a>
+        
+      </div>
+      </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+      <script>
+        let app = new Vue({
+    el:'#app'
+    ,
+    data:{}
+    ,
+    methods:{
+goToAboutUs(){window.location.href="من نحن.html";},
+goTocontactUs(){window.location.href="اتصل بنا.html";},
+goToTerms(){window.location.href="الشروط والمواصفات.html";},
+goToPersonalCare(){window.location.href="منتجات العناية الشخصية.html";},
+goToPlasticReplace(){window.location.href="بدائل البلاستك.html";},
+goTopackaging(){window.location.href="منتجات التغليف صديقة البيئة.html";},
+goToBags(){window.location.href="حقائب التسوق القماشية.html";},
+goToIndex(){window.location.href="index.html";},
+    }
+    }
+    )
+    
+        </script>
+    </body>
+</html>
